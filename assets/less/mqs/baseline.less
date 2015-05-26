@@ -1,0 +1,126 @@
+.baseline(@param:'') {
+	
+	body {
+		overflow: hidden;
+		background: #000;
+	}
+	
+	#app {
+		background: #fff;
+		width: 1920px;
+		height: 1080px;
+		overflow: hidden;
+		
+		img {
+			display: block;
+			vertical-align: top;
+			margin: 0;
+		}
+	}
+	
+	/*
+	 * Hide/showing pages
+	 */
+	
+	#app {
+		#topnav {
+			ul.nav {
+				display: none;
+			}
+		}
+		
+		#container {
+			section.page {
+				display: none;
+			}
+		}
+	}
+	
+	#app.active-page-info {
+		#topnav {
+			ul.nav {
+				&.nav-info {
+					display: block;
+				}
+			}
+		}
+		
+		#container {
+			#info {
+				display: block;
+			}
+		}
+	}
+	
+	#app.active-page-about {
+		#topnav {
+			ul.nav {
+				&.nav-about {
+					display: block;
+				}
+			}
+		}
+		
+		#container {
+			#about {
+				display: block;
+			}
+		}
+	}
+	
+	#app.active-page-bio {
+		#topnav {
+			ul.nav {
+				&.nav-bio {
+					display: block;
+				}
+			}
+		}
+		
+		#container {
+			#bio {
+				display: block;
+			}
+		}
+	}
+	
+	/*
+	 * Utility classes
+	 */
+	 
+	.hidden {
+		display: none;
+	}
+	
+	/*
+	 * Topnav
+	 */
+	
+	#topnav {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 999;
+		
+		ul, li {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: block;
+		}
+		
+		li {
+			position: absolute;
+			top: 0;
+			
+			&.prev {
+				left: 0;
+			}
+			
+			&.next {
+				right: 0;
+			}
+		}
+	}
+}

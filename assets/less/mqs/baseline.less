@@ -19,6 +19,34 @@
 	}
 	
 	/*
+	 * Animation keyframes
+	 */
+	
+	@-webkit-keyframes pageFadeIn {
+		0% {
+			opacity: 0;
+			transform: translateY(91px) translateZ(-91px);
+		}
+		
+		100% {
+			opacity: 1;
+			transform: translateZ(0);
+		}
+	}
+	
+	@-webkit-keyframes pageFadeOut {
+		0% {
+			opacity: 1;
+			transform: translateZ(0);
+		}
+		
+		100% {
+			opacity: 0;
+			transform: translateY(91px) translateZ(-91px);
+		}
+	}
+	
+	/*
 	 * Hide/showing pages
 	 */
 	
@@ -30,8 +58,22 @@
 		}
 		
 		#container {
+			-webkit-perspective: 200;
+			-webkit-perspective-origin: 50% 50%;
+		
 			section.page {
-				display: none;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 1920px;
+				height: 1080px;
+							
+				animation-name: pageFadeOut;
+				animation-timing-function: ease-in;
+				animation-duration: .5s;
+				animation-direction: normal;
+				animation-fill-mode: forwards;
+				animation-play-state: running;
 			}
 		}
 	}
@@ -46,8 +88,11 @@
 		}
 		
 		#container {
-			#info {
-				display: block;
+			#info {		
+				animation-name: pageFadeIn;		
+				animation-timing-function: ease-out;
+				animation-duration: .2s;
+				z-index: 200;
 			}
 		}
 	}
@@ -63,7 +108,10 @@
 		
 		#container {
 			#about {
-				display: block;
+				animation-name: pageFadeIn;
+				animation-timing-function: ease-out;
+				animation-duration: .2s;
+				z-index: 200;
 			}
 		}
 	}
@@ -79,10 +127,14 @@
 		
 		#container {
 			#bio {
-				display: block;
+				animation-name: pageFadeIn;
+				animation-timing-function: ease-out;
+				animation-duration: .2s;
+				z-index: 200;
 			}
 		}
 	}
+		
 	
 	/*
 	 * Utility classes

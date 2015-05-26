@@ -14,31 +14,77 @@ body {
   margin: 0;
 }
 /*
+	 * Animation keyframes
+	 */
+@-webkit-keyframes pageFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(91px) translateZ(-91px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+@-webkit-keyframes pageFadeOut {
+  0% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(91px) translateZ(-91px);
+  }
+}
+/*
 	 * Hide/showing pages
 	 */
 #app #topnav ul.nav {
   display: none;
 }
+#app #container {
+  -webkit-perspective: 200;
+  -webkit-perspective-origin: 50% 50%;
+}
 #app #container section.page {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 1080px;
+  animation-name: pageFadeOut;
+  animation-timing-function: ease-in;
+  animation-duration: .5s;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
 }
 #app.active-page-info #topnav ul.nav.nav-info {
   display: block;
 }
 #app.active-page-info #container #info {
-  display: block;
+  animation-name: pageFadeIn;
+  animation-timing-function: ease-out;
+  animation-duration: .2s;
+  z-index: 200;
 }
 #app.active-page-about #topnav ul.nav.nav-about {
   display: block;
 }
 #app.active-page-about #container #about {
-  display: block;
+  animation-name: pageFadeIn;
+  animation-timing-function: ease-out;
+  animation-duration: .2s;
+  z-index: 200;
 }
 #app.active-page-bio #topnav ul.nav.nav-bio {
   display: block;
 }
 #app.active-page-bio #container #bio {
-  display: block;
+  animation-name: pageFadeIn;
+  animation-timing-function: ease-out;
+  animation-duration: .2s;
+  z-index: 200;
 }
 /*
 	 * Utility classes

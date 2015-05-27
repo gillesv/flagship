@@ -1,3 +1,52 @@
 .bioView(@param:'') {
 	
+	#bio {
+		
+		
+		.col.left {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 795px;
+			height: 1080px;
+			
+			.copyright {
+				color: white;
+				position: absolute;
+				bottom: 30px;
+				left: 30px;
+			}
+		}
+		
+		.col.right {
+			position: absolute;
+			top: 0;
+			left: 795px;
+			height: 1080px;
+			width: 1125px;
+			
+			.inner {
+				padding: 64px 50px 0 64px;
+			}
+			
+			.columns {
+				-webkit-columns: 300px 2;
+			}
+		}
+		
+		.brand {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+		
+		.langswitch {
+			position: absolute;
+			left: 1163px;
+			top: 63px;
+			z-index: 100;
+		}
+		
+	}
+	
 }

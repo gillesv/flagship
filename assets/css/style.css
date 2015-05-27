@@ -241,7 +241,7 @@ div.brand {
   font-family: "BelfiusAlternativeBold";
   font-size: 24px;
   display: table-cell;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.9);
   height: 124px;
   min-width: 321px;
   vertical-align: middle;
@@ -330,4 +330,41 @@ section.page img.template {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+#bio .col.left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 795px;
+  height: 1080px;
+}
+#bio .col.left .copyright {
+  color: white;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+#bio .col.right {
+  position: absolute;
+  top: 0;
+  left: 795px;
+  height: 1080px;
+  width: 1125px;
+}
+#bio .col.right .inner {
+  padding: 64px 50px 0 64px;
+}
+#bio .col.right .columns {
+  -webkit-columns: 300px 2;
+}
+#bio .brand {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+#bio .langswitch {
+  position: absolute;
+  left: 1163px;
+  top: 63px;
+  z-index: 100;
 }

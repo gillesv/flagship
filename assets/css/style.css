@@ -92,6 +92,35 @@ span.copyright {
   line-height: 1;
 }
 /*
+	 * Langswitch component
+	 */
+nav.langswitch {
+  position: absolute;
+}
+nav.langswitch.inline {
+  display: inline;
+  position: relative;
+}
+nav.langswitch a {
+  display: inline-block;
+  text-decoration: none;
+  color: #435c6b;
+  font-family: "BelfiusAlternativeBold";
+  font-weight: bold;
+  font-size: 24px;
+  border: 3px solid #435c6b;
+  width: 55px;
+  line-height: 55px;
+  text-align: center;
+  border-radius: 50%;
+}
+.lang-nl nav.langswitch a.lang-nl {
+  display: none;
+}
+.lang-fr nav.langswitch a.lang-fr {
+  display: none;
+}
+/*
 	 * Animation keyframes
 	 */
 @-webkit-keyframes pageFadeIn {

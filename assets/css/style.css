@@ -121,6 +121,17 @@ nav.langswitch a {
   display: none;
 }
 /*
+	 * Brand
+	 */
+div.brand {
+  display: block;
+  width: 215px;
+  height: 80px;
+  overflow: hidden;
+  background: transparent url(../img/belfius-logo.png) no-repeat 0 0;
+  text-indent: -5000em;
+}
+/*
 	 * Animation keyframes
 	 */
 @-webkit-keyframes pageFadeIn {
@@ -230,6 +241,25 @@ section.page img.template {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 1;
+  opacity: .2;
   z-index: -1;
+}
+#info .col.left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 1080px;
+}
+#info .col.right {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 1080px;
+}
+#info .brand {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }

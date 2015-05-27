@@ -234,6 +234,47 @@ div.brand {
 #topnav li.next {
   right: 0;
 }
+.nav .prev a,
+.nav .next a {
+  text-decoration: none;
+  color: #435c6b;
+  font-family: "BelfiusAlternativeBold";
+  font-size: 24px;
+  display: table-cell;
+  background: rgba(255, 255, 255, 0.5);
+  height: 124px;
+  min-width: 321px;
+  vertical-align: middle;
+}
+.nav .prev a span.icon,
+.nav .next a span.icon {
+  display: inline-block;
+  width: 54px;
+  height: 54px;
+  vertical-align: middle;
+  margin: 0 17px;
+}
+.nav .prev a span.label,
+.nav .next a span.label {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 32px;
+  margin: 0;
+}
+.nav .prev a {
+  text-align: left;
+  border-bottom-right-radius: 16px;
+}
+.nav .prev a span.icon {
+  background: transparent url(../img/btn-icon-left.png) no-repeat 0 0;
+}
+.nav .next a {
+  text-align: right;
+  border-bottom-left-radius: 16px;
+}
+.nav .next a span.icon {
+  background: transparent url(../img/btn-icon-right.png) no-repeat 0 0;
+}
 /*
 	 * Pages
 	 */

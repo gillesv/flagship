@@ -289,6 +289,60 @@
 		}
 	}
 	
+	.nav {
+		.prev, .next {
+			a {
+				text-decoration: none;
+				color: @color;
+				font-family: @display;
+				font-size: 24px;
+				display: table-cell;
+				background: rgba(255, 255, 255, .5);
+				height: 124px;
+				min-width: 321px;
+				vertical-align: middle;
+				
+			
+				span.icon {
+					display: inline-block;
+					width: 54px;
+					height: 54px;
+					vertical-align: middle;
+					margin: 0 17px;
+				}
+				
+				span.label {
+					display: inline-block;
+					vertical-align: middle;
+					line-height: 32px;
+					margin: 0;
+				}
+			}
+		}
+		
+		.prev {
+			a {
+				text-align: left;
+				border-bottom-right-radius: 16px;
+			}
+		
+			a span.icon {
+				background: transparent url(../img/btn-icon-left.png) no-repeat 0 0;
+			}
+		}
+		
+		.next {
+			a {
+				text-align: right;
+				border-bottom-left-radius: 16px;
+			}
+		
+			a span.icon {
+				background: transparent url(../img/btn-icon-right.png) no-repeat 0 0;
+			}
+		}
+	}
+	
 	/*
 	 * Pages
 	 */

@@ -1,67 +1,12 @@
 .baseline(@param:'') {
 	
-	@font-face {
-	    font-family: "BelfiusAlternativeBold";
-	    src: 	url("../fonts/belfiusalternative_bold.eot");
-	    src: 	url("../fonts/belfiusalternative_bold.eot?#iefix") format('eot'), 
-			    url("../fonts/belfiusalternative_bold.woff") format('woff'), 
-			    url("../fonts/belfiusalternative_bold.ttf") format('truetype'), 
-			    url("../fonts/belfiusalternative_bold.svg#BelfiusAlternativeBold") format('svg');
-	}
-	@font-face {
-	    font-family: "BelfiusAlternativeLight";
-	    src: 	url("../fonts/belfiusalternative_light.eot");
-	    src: 	url("../fonts/belfiusalternative_light.eot?#iefix") format('eot'), 
-	    		url("../fonts/belfiusalternative_light.woff") format('woff'), 
-	    		url("../fonts/belfiusalternative_light.ttf") format('truetype'), 
-	    		url("../fonts/belfiusalternative_light.svg#BelfiusAlternativeLight") format('svg');
-	}
-	@font-face {
-	    font-family: "BelfiusAlternative";
-	    src: 	url("../fonts/belfiusalternative_regular.eot");
-	    src: 	url("../fonts/belfiusalternative_regular.eot?#iefix") format('eot'), 
-	    		url("../fonts/belfiusalternative_regular.woff") format('woff'), 
-	    		url("../fonts/belfiusalternative_regular.ttf") format('truetype'), 
-	    		url("../fonts/belfiusalternative_regular.svg#BelfiusAlternative") format('svg');
-	}
-	@font-face {
-	    font-family: "BelfiusBlack";
-	    src: 	url("../fonts/belfiusalternative-black.eot");
-	    src: 	url("../fonts/belfiusalternative-black.eot?#iefix") format('eot'), 
-	    		url("../fonts/belfiusalternative-black.woff") format('woff'), 
-	    		url("../fonts/belfiusalternative-black.ttf") format('truetype'), 
-	    		url("../fonts/belfiusalternative-black.svg#BelfiusBlack") format('svg');
-	    font-weight: bold;
-	}
-	@font-face {
-	    font-family: "BelfiusNormalBold";
-	    src: 	url("../fonts/belfiusnormal_bold.eot");
-	    src: 	url("../fonts/belfiusnormal_bold.eot?#iefix") format('eot'), 
-	    		url("../fonts/belfiusnormal_bold.woff") format('woff'), 
-	    		url("../fonts/belfiusnormal_bold.ttf") format('truetype'), 
-	    		url("../fonts/belfiusnormal_bold.svg#BelfiusNormalBold") format('svg');
-	}
-	@font-face {
-	    font-family: "BelfiusNormalLight";
-	    src: 	url("../fonts/belfiusnormal_light.eot");
-	    src:	url("../fonts/belfiusnormal_light.eot?#iefix") format('eot'), 
-	    		url("../fonts/belfiusnormal_light.woff") format('woff'), 
-	    		url("../fonts/belfiusnormal_light.ttf") format('truetype'), 
-	    		url("../fonts/belfiusnormal_light.svg#BelfiusNormalLight") format('svg');
-	}
-	@font-face {
-	    font-family: "BelfiusNormal";
-	    src: 	url("../fonts/belfiusnormal_regular.eot");
-	    src: 	url("../fonts/belfiusnormal_regular.eot?#iefix") format('eot'), 
-	    		url("../fonts/belfiusnormal_regular.woff") format('woff'), 
-	    		url("../fonts/belfiusnormal_regular.ttf") format('truetype'), 
-	    		url("../fonts/belfiusnormal_regular.svg#BelfiusNormal") format('svg');
-	}
+	
 	
 	body {
 		overflow: hidden;
 		background: #000;
-		font-family: "BelfiusAlternativeBold";
+		font-family: @bodyfont;
+		font-weight: 300;
 	}
 	
 	#app {

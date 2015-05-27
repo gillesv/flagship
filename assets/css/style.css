@@ -331,6 +331,216 @@ section.page img.template {
   bottom: 0;
   left: 0;
 }
+#about .title,
+#about .intro {
+  position: absolute;
+  z-index: 10;
+}
+#about .title {
+  text-align: center;
+  width: 100%;
+  top: 94px;
+  padding-left: 61px;
+}
+#about .title .langswitch {
+  top: -8px;
+  margin-left: 20px;
+}
+#about .intro {
+  width: 770px;
+  font-family: "BelfiusAlternativeBold";
+  font-size: 18px;
+  line-height: 36px;
+  top: 150px;
+  left: 575px;
+  text-align: center;
+}
+#about .brand {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+#about .timeline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 1080px;
+  background: transparent url(../img/about/timeline.png) no-repeat 0 0;
+}
+#about .timeline .examples {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#about .timeline .examples .example {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#about .timeline .examples .example img {
+  display: block;
+  border-radius: 8px 8px  0 8px;
+  position: relative;
+  z-index: 10;
+  box-sizing: border-box;
+}
+#about .timeline .examples .example .year {
+  position: absolute;
+  color: #c30045;
+  font-family: "BelfiusAlternativeBold";
+  font-size: 16px;
+  line-height: 1;
+  text-align: center;
+}
+#about .timeline .examples .example .copyright {
+  position: absolute;
+  font-size: 10px;
+  line-height: 1;
+  color: #999999;
+}
+#about .timeline .examples .example a:after {
+  content: "_";
+  overflow: hidden;
+  text-indent: -5em;
+  text-decoration: none;
+  display: block;
+  width: 4px;
+  background: #c30045;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#about .timeline .examples .example-1 {
+  top: 366px;
+  left: 63px;
+}
+#about .timeline .examples .example-1 .year {
+  top: 299px;
+  width: 302px;
+}
+#about .timeline .examples .example-1 .copyright {
+  top: 249px;
+  left: 159px;
+}
+#about .timeline .examples .example-1 a:after {
+  left: 151px;
+  height: 265px;
+}
+#about .timeline .examples .example-2 {
+  top: 280px;
+  left: 389px;
+}
+#about .timeline .examples .example-2 .year {
+  top: 385px;
+  width: 246px;
+}
+#about .timeline .examples .example-2 .copyright {
+  top: 335px;
+  left: 131px;
+}
+#about .timeline .examples .example-2 a:after {
+  left: 123px;
+  height: 351px;
+}
+#about .timeline .examples .example-3 {
+  top: 301px;
+  left: 698px;
+}
+#about .timeline .examples .example-3 .year {
+  top: 364px;
+  width: 153px;
+}
+#about .timeline .examples .example-3 .copyright {
+  top: 314px;
+  left: 84.5px;
+}
+#about .timeline .examples .example-3 a:after {
+  left: 76.5px;
+  height: 330px;
+}
+#about .timeline .examples .example-4 {
+  top: 276px;
+  left: 923px;
+}
+#about .timeline .examples .example-4 .year {
+  top: 389px;
+  width: 302px;
+}
+#about .timeline .examples .example-4 .copyright {
+  top: 339px;
+  left: 159px;
+}
+#about .timeline .examples .example-4 a:after {
+  left: 151px;
+  height: 355px;
+}
+#about .timeline .examples .example-5 {
+  top: 349px;
+  left: 1316px;
+}
+#about .timeline .examples .example-5 .year {
+  top: 316px;
+  width: 196px;
+}
+#about .timeline .examples .example-5 .copyright {
+  top: 266px;
+  left: 106px;
+}
+#about .timeline .examples .example-5 a:after {
+  left: 98px;
+  height: 282px;
+}
+#about .timeline .examples .example-6 {
+  top: 300px;
+  left: 1589px;
+}
+#about .timeline .examples .example-6 .year {
+  top: 365px;
+  width: 252px;
+}
+#about .timeline .examples .example-6 .copyright {
+  top: 315px;
+  left: 134px;
+}
+#about .timeline .examples .example-6 a:after {
+  left: 126px;
+  height: 331px;
+}
+#about .timeline .examples .example-6 img {
+  border: 4px solid #c30045;
+}
+#about .timeline .descriptions {
+  position: absolute;
+  top: 725px;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+#about .timeline .descriptions .epoch {
+  position: absolute;
+  width: 430px;
+}
+#about .timeline .descriptions .epoch p {
+  font-size: 16px;
+  line-height: 36px;
+}
+#about .timeline .descriptions .epoch h2 {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1;
+  color: #c30045;
+}
+#about .timeline .descriptions .epoch-1 {
+  left: 140px;
+}
+#about .timeline .descriptions .epoch-2 {
+  left: 748px;
+}
+#about .timeline .descriptions .epoch-3 {
+  left: 1350px;
+}
 #bio .col.left {
   position: absolute;
   top: 0;

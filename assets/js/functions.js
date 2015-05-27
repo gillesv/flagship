@@ -2,7 +2,7 @@ $(document).ready(function() {
 	// dead simple paging
 	var $app = $("#app"),
 		activepageclass = "active-page-",
-		activepage = "bio";
+		activepage = "about";
 	
 	$('nav a').click(function(evt) {
 		evt.preventDefault();

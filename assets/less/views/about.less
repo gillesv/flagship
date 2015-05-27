@@ -1,3 +1,205 @@
 .aboutView(@param:'') {
 	
+	// Timeline Item Parametric Mix-In 
+	
+	// magic variables — linked to static 1920x1080p design
+	@yaxistop: 631;
+	
+	.timelineItem(@top, @left, @width){
+		top: @top*1px;
+		left: @left*1px;
+		
+		.year {
+			top: (@yaxistop - @top)*1px + 34px;
+			width: @width*1px;
+		}
+		
+		.copyright {
+			top: (@yaxistop - @top)*1px - 16px;
+			left: @width/2*1px + 8px;
+		}
+		
+		a:after {
+			left: @width/2*1px;
+			height: (@yaxistop - @top)*1px;
+		}
+	}
+	
+	.epochItem(@left) {
+		left: @left*1px;
+	}
+	
+	// Layout
+	
+	#about {
+	
+		.title, .intro {
+			position: absolute;
+			z-index: 10;
+		}
+		
+		.title {
+			text-align: center;
+			width: 100%;
+			top: 94px;
+			padding-left: 61px;	// compensate
+			
+			.langswitch {
+				top: -8px;
+				margin-left: 20px;
+			}
+		}
+		
+		.intro {
+			width: 770px;
+			font-family: @display;
+			font-size: 18px;
+			line-height: 36px;
+			top: 150px;
+			left: 575px;
+			text-align: center;
+		}
+		
+		.brand {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+		
+		.timeline {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 1920px;
+			height: 1080px;
+			background: transparent url(../img/about/timeline.png) no-repeat 0 0;
+			
+			.examples {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				
+				.example {
+					position: absolute;
+					top: 0;
+					left: 0;
+					
+					img {
+						display: block;
+						border-radius: 8px 8px  0 8px;
+						position: relative;
+						z-index: 10;
+						box-sizing: border-box;
+					}
+					
+					.year {
+						position: absolute;
+					
+						color: @red;
+						font-family: @display;
+						font-size: 16px;
+						line-height: 1;				
+						text-align: center;
+					}
+					
+					.copyright {
+						position: absolute;
+						
+						font-size: 10px;
+						line-height: 1;
+						color: @grey;
+					}
+					
+					a:after {
+						content: "_";
+						overflow: hidden;
+						text-indent: -5em;
+						text-decoration: none;
+						display: block;
+						width: 4px;
+						background: @red;
+						position: absolute;
+						top: 0;
+						left: 0;
+					}
+				}
+				
+				.example-1 {
+					.timelineItem(366, 63, 302);
+				}
+				
+				.example-2 {
+					.timelineItem(280, 389, 246);
+				}
+				
+				.example-3 {
+					.timelineItem(301, 698, 153);
+				}
+				
+				.example-4 {
+					.timelineItem(276, 923, 302);
+				}
+				
+				.example-5 {
+					.timelineItem(349, 1316, 196);
+				}
+				
+				.example-6 {
+					.timelineItem(300, 1589, 252);
+					
+					img {
+						border: 4px solid @red;
+					}
+				}
+			}
+			
+			.descriptions {
+				position: absolute;
+				top: @yaxistop*1px + 94px;
+				left: 0;
+				right: 0;
+				width: 100%;
+				
+				
+				.epoch {
+					position: absolute;
+				
+					p{
+						font-size: 16px;
+						line-height: 36px;
+					}
+					
+					h2 {
+						text-align: center;
+						font-size: 18px;
+						line-height: 1;
+						color: @red;
+					}
+										
+					width: 430px;
+				}
+				
+				.epoch-1 {
+					.epochItem(140px);
+				}
+				
+				.epoch-2 {
+					.epochItem(748px);
+				}
+				
+				.epoch-3 {
+					.epochItem(1350px);
+				}
+			}
+			
+						
+		}
+		
+		
+	}
+	
+	
+	
+	
 }

@@ -37,7 +37,7 @@
 body {
   overflow: hidden;
   background: #000;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
   font-weight: 300;
   color: #435c6b;
 }
@@ -274,6 +274,9 @@ div.brand {
 }
 .nav .next a span.icon {
   background: transparent url(../img/btn-icon-right.png) no-repeat 0 0;
+}
+.nav.nav-info .next a {
+  background: transparent;
 }
 /*
 	 * Pages
@@ -634,7 +637,7 @@ section.page img.template {
   height: 738px;
 }
 #history .columns .first {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
   font-weight: bold;
   font-size: 18px;
   line-height: 36px;
@@ -678,6 +681,8 @@ section.page img.template {
 }
 #bio .col.right .columns p {
   margin: 0 0 36px;
+  font-size: 23px;
+  line-height: 36px;
 }
 #bio .brand {
   position: absolute;

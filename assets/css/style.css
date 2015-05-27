@@ -285,12 +285,27 @@ section.page img.template {
   opacity: .2;
   z-index: -1;
 }
+#info .langswitch {
+  position: absolute;
+  top: 65px;
+  left: 835px;
+}
 #info .col.left {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
+  top: 217px;
+  left: 166px;
+  width: 630px;
   height: 1080px;
+}
+#info .col.left hgroup,
+#info .col.left h2 {
+  text-align: center;
+}
+#info .col.left hgroup {
+  margin-bottom: 24px;
+}
+#info .col.left h1 {
+  margin: 15px 0 30px;
 }
 #info .col.right {
   position: absolute;
@@ -298,6 +313,18 @@ section.page img.template {
   left: 50%;
   width: 50%;
   height: 1080px;
+  background: transparent url(../img/info/img-background.jpg) no-repeat center center;
+}
+#info .col.right img {
+  position: absolute;
+  top: 209px;
+  left: 45px;
+}
+#info .col.right span.copyright {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  color: #000;
 }
 #info .brand {
   position: absolute;

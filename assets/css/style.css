@@ -56,21 +56,17 @@ body {
 @-webkit-keyframes pageFadeIn {
   0% {
     opacity: 0;
-    transform: translateY(91px) translateZ(-91px);
   }
   100% {
     opacity: 1;
-    transform: translateZ(0);
   }
 }
 @-webkit-keyframes pageFadeOut {
   0% {
     opacity: 1;
-    transform: translateZ(0);
   }
   100% {
     opacity: 0;
-    transform: translateY(91px) translateZ(-91px);
   }
 }
 /*
@@ -89,6 +85,7 @@ body {
   left: 0;
   width: 1920px;
   height: 1080px;
+  background: #fff;
   animation-name: pageFadeOut;
   animation-timing-function: ease-in;
   animation-duration: .5s;
@@ -155,4 +152,14 @@ body {
 }
 #topnav li.next {
   right: 0;
+}
+/*
+	 * Pages
+	 */
+section.page img.template {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: .2;
+  z-index: -10;
 }

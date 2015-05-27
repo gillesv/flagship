@@ -7,6 +7,7 @@
 		background: #000;
 		font-family: @bodyfont;
 		font-weight: 300;
+		color: @color;
 	}
 	
 	#app {
@@ -22,6 +23,51 @@
 		}
 	}
 	
+	/*
+	 * Typography
+	 */
+	
+	h1 {
+		color: @red;
+		text-transform: uppercase;
+		font-family: @display;
+		font-size: 36px;
+		margin: 0;
+		line-height: 1;
+	}
+	
+	h2 {
+		color: @black;
+		font-size: 26px;
+		font-family: @display;
+		font-weight: bold;
+	}
+	
+	h3, h4 {
+		color: @grey;
+		font-family: @displayalt;
+		font-weight: 200;
+		font-size: 24px;
+		line-height: 1.4;
+		margin: 0;
+		font-variant: small-caps;
+	}
+	
+	h4 {
+		font-size: 18px;
+	}
+	
+	p {
+		font-size: 24px;
+		line-height: 36px;
+	}
+	
+	span.copyright {
+		font-family: @displayalt;
+		font-size: 13px;
+		line-height: 1;
+	}
+		
 	/*
 	 * Animation keyframes
 	 */
@@ -194,7 +240,7 @@
 			top: 0;
 			left: 0;
 			opacity: 1;
-			z-index: 100;
+			z-index: -1;
 		}
 		
 	}

@@ -39,6 +39,7 @@ body {
   background: #000;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
+  color: #435c6b;
 }
 #app {
   background: #fff;
@@ -50,6 +51,45 @@ body {
   display: block;
   vertical-align: top;
   margin: 0;
+}
+/*
+	 * Typography
+	 */
+h1 {
+  color: #c30045;
+  text-transform: uppercase;
+  font-family: "BelfiusAlternativeBold";
+  font-size: 36px;
+  margin: 0;
+  line-height: 1;
+}
+h2 {
+  color: #000000;
+  font-size: 26px;
+  font-family: "BelfiusAlternativeBold";
+  font-weight: bold;
+}
+h3,
+h4 {
+  color: #999999;
+  font-family: "BelfiusAlternativeLight";
+  font-weight: 200;
+  font-size: 24px;
+  line-height: 1.4;
+  margin: 0;
+  font-variant: small-caps;
+}
+h4 {
+  font-size: 18px;
+}
+p {
+  font-size: 24px;
+  line-height: 36px;
+}
+span.copyright {
+  font-family: "BelfiusAlternativeLight";
+  font-size: 13px;
+  line-height: 1;
 }
 /*
 	 * Animation keyframes
@@ -162,5 +202,5 @@ section.page img.template {
   top: 0;
   left: 0;
   opacity: 1;
-  z-index: 100;
+  z-index: -1;
 }

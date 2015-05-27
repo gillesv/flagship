@@ -173,6 +173,7 @@ div.brand {
   animation-direction: normal;
   animation-fill-mode: forwards;
   animation-play-state: running;
+  z-index: 100;
 }
 #app.active-page-info #topnav ul.nav.nav-info {
   display: block;

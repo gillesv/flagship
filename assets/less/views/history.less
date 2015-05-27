@@ -1,3 +1,71 @@
 .historyView(@param:'') {
 	
+	#history {
+		background: transparent url(../img/history/overlayer-bg.png) no-repeat 0 0;
+		
+		a.button.back {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		
+			text-decoration: none;
+			color: @color;
+			font-family: @display;
+			font-size: 24px;
+			display: table-cell;
+			background: rgba(255, 255, 255, .9);
+			min-width: 321px;
+			vertical-align: middle;
+			padding: 36px 0;
+			
+		
+			span.icon {
+				display: inline-block;
+				width: 54px;
+				height: 54px;
+				vertical-align: middle;
+				margin: 0 17px;
+				background: transparent url(../img/btn-icon-left.png) no-repeat 0 0;
+			}
+			
+			span.label {
+				display: inline-block;
+				vertical-align: middle;
+				line-height: 32px;
+				margin: 0;
+			}
+		}
+		
+		.columns {
+			-webkit-columns: 200px 4;
+			
+			position: absolute;
+			top: 184px;
+			left: 364px;
+			width: 1200px;
+			height: 738px;
+			
+		
+			.first {
+				font-family: @bodyfont;
+				font-weight: bold;
+				font-size: 18px;
+				line-height: 36px;
+			}
+			
+			p {
+				font-size: 16px;
+				line-height: 36px;
+				margin: 0 0 36px;
+			}
+		}
+		
+		.belfiusartontour {
+			position: absolute;
+			top: 188px;
+			left: 1636px;
+		}
+		
+	}
+	
 }

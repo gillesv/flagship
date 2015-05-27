@@ -12,7 +12,21 @@ $(document).ready(function() {
 		$app.toggleClass(activepageclass + activepage, false);
 		$app.toggleClass(activepageclass + href, true);
 		
+		$('#about').toggleClass('showOverlayer', false);	// hide overlayer
+		
 		activepage = href;		
+	});
+	
+	$('#about .button.info').click(function(evt) {
+		evt.preventDefault();
+		
+		$('#about').toggleClass('showOverlayer', true);
+	});
+	
+	$('#history .button.back').click(function(evt) {
+		evt.preventDefault();
+		
+		$('#about').toggleClass('showOverlayer', false);
 	});
 });
 

@@ -331,6 +331,9 @@ section.page img.template {
   bottom: 0;
   left: 0;
 }
+#about {
+  /** Overlayer show/hide **/
+}
 #about .title,
 #about .intro {
   position: absolute;
@@ -572,6 +575,80 @@ section.page img.template {
   position: relative;
   left: 10px;
 }
+#about .overlayer {
+  animation-name: pageFadeOut;
+  animation-timing-function: ease-in;
+  animation-duration: .5s;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 500;
+}
+#about.showOverlayer .overlayer {
+  animation-name: pageFadeIn;
+  pointer-events: auto;
+}
+#history {
+  background: transparent url(../img/history/overlayer-bg.png) no-repeat 0 0;
+}
+#history a.button.back {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-decoration: none;
+  color: #435c6b;
+  font-family: "BelfiusAlternativeBold";
+  font-size: 24px;
+  display: table-cell;
+  background: rgba(255, 255, 255, 0.9);
+  min-width: 321px;
+  vertical-align: middle;
+  padding: 36px 0;
+}
+#history a.button.back span.icon {
+  display: inline-block;
+  width: 54px;
+  height: 54px;
+  vertical-align: middle;
+  margin: 0 17px;
+  background: transparent url(../img/btn-icon-left.png) no-repeat 0 0;
+}
+#history a.button.back span.label {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 32px;
+  margin: 0;
+}
+#history .columns {
+  -webkit-columns: 200px 4;
+  position: absolute;
+  top: 184px;
+  left: 364px;
+  width: 1200px;
+  height: 738px;
+}
+#history .columns .first {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 36px;
+}
+#history .columns p {
+  font-size: 16px;
+  line-height: 36px;
+  margin: 0 0 36px;
+}
+#history .belfiusartontour {
+  position: absolute;
+  top: 188px;
+  left: 1636px;
+}
 #bio .col.left {
   position: absolute;
   top: 0;
@@ -597,6 +674,10 @@ section.page img.template {
 }
 #bio .col.right .columns {
   -webkit-columns: 300px 2;
+  height: 710px;
+}
+#bio .col.right .columns p {
+  margin: 0 0 36px;
 }
 #bio .brand {
   position: absolute;

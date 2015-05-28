@@ -1,0 +1,47 @@
+.screensaverView(@param:'') {
+	
+	#screensaver {
+		position: absolute;
+		top: 0;
+		left: 0;
+		
+		width: 1920px;
+		height: 1080px;
+		
+		background: #fff;
+		
+		.brand {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+		
+		ul, li {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+		ul {
+			width: 100%;
+			height: 100%;
+			display: table;
+		}
+		
+		li {
+			display: table-cell;
+			text-align: center;
+			width: 50%;
+			vertical-align: middle;
+		}
+		
+		li a {
+			color: @color;
+			text-decoration: none;
+			font-family: @display;
+			font-size: 150px;
+		}
+		
+	}
+	
+}

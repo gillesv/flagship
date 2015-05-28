@@ -762,3 +762,39 @@ section.page img.template {
   top: 63px;
   z-index: 100;
 }
+#screensaver {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 1080px;
+  background: #fff;
+}
+#screensaver .brand {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+#screensaver ul,
+#screensaver li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#screensaver ul {
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+#screensaver li {
+  display: table-cell;
+  text-align: center;
+  width: 50%;
+  vertical-align: middle;
+}
+#screensaver li a {
+  color: #435c6b;
+  text-decoration: none;
+  font-family: "BelfiusAlternativeBold";
+  font-size: 150px;
+}

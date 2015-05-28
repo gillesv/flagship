@@ -166,6 +166,16 @@
 		}
 	}
 	
+	@-webkit-keyframes elementFadeIn {
+		0% {
+			opacity: 0;
+		}
+		
+		100% {
+			opacity: 1;
+		}
+	}
+	
 	/*
 	 * Hide/showing pages
 	 */
@@ -182,6 +192,9 @@
 			-webkit-perspective-origin: 50% 50%;
 		
 			section.page {
+				-webkit-perspective: 200;
+				-webkit-perspective-origin: 50% 50%;
+			
 				position: absolute;
 				top: 0;
 				left: 0;
@@ -259,6 +272,68 @@
 		animation-name: pageFadeIn;
 	}
 		
+	/*
+	 * Modular animation classes
+	 */
+	
+	.page.active {
+	
+		.intro-1,
+		.intro-2,
+		.intro-3,
+		.intro-4,
+		.intro-5,
+		.intro-6,
+		.intro-7,
+		.intro-8,
+		.intro-9 {
+			opacity: 0;
+			
+			animation-name: elementFadeIn;
+			animation-duration: .5s;
+			animation-timing-function: ease-out;
+			
+			animation-direction: normal;
+			animation-fill-mode: forwards;
+			animation-play-state: running;
+		}
+		
+		.intro-1 {
+			animation-delay: 0s;
+		}
+		
+		.intro-2 {
+			animation-delay: .2s;
+		}
+		
+		.intro-3 {
+			animation-delay: .4s;
+		}
+		
+		.intro-4 {
+			animation-delay: .6s;
+		}
+		
+		.intro-5 {
+			animation-delay: .8s;
+		}
+		
+		.intro-6 {
+			animation-delay: 1s;
+		}
+		
+		.intro-7 {
+			animation-delay: 1.2s;
+		}
+		
+		.intro-8 {
+			animation-delay: 1.4s;
+		}
+		
+		.intro-9 {
+			animation-delay: 1.6s;
+		}		
+	}
 	
 	/*
 	 * Utility classes

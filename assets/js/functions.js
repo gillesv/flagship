@@ -110,10 +110,16 @@ $(document).ready(function() {
 	// function show/hide page
 	function showPage() {
 		$app.toggleClass(activepageclass + activepage, true);
+		
+		$('#' + activepage).toggleClass("active", true);
+		
+		window.location.hash = "#" + activepage;
 	}
 	
 	function hidePage() {
 		$app.toggleClass(activepageclass + activepage, false);
+		
+		$('#' + activepage).toggleClass("active", false);
 	}
 	
 	// function show/hide overlayer

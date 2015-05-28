@@ -3,6 +3,7 @@ $(document).ready(function() {
 	var $app = $("#app"),
 		activepageclass = "active-page-",
 		activepage = "info",
+		pagesequence = ["info", "about", "bio"],
 		overlayerOpen = false;
 	
 	// check URL hash
@@ -75,6 +76,41 @@ $(document).ready(function() {
 		overlayerOpen = false;
 		
 		$('#about').toggleClass('showOverlayer', overlayerOpen);
+	});
+	
+	// swiping
+	var hammertime = new Hammer(document.getElementById('app'), {});
+	
+	hammertime.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL});
+	
+	hammertime.on('swipe', function(evt) {
+		var index = pagesequence.indexOf(activepage);
+	
+		if(evt.offsetDirection == 2) {
+			// swipe right
+			index ++;
+		} else if(evt.offsetDirection == 4) {
+			// swipe left
+			index --;
+		}
+		
+		if(index < 0) {
+			index = pagesequence.length - 1;
+		}
+		
+		if(index > pagesequence.length - 1) {
+			index = 0;
+		}
+		
+		overlayerOpen = false;
+		$('#about').toggleClass('showOverlayer', overlayerOpen);
+		
+		$app.toggleClass(activepageclass + activepage, false);
+		
+		activepage = pagesequence[index].toString();
+		
+		$app.toggleClass(activepageclass + activepage, true);
+		
 	});
 });
 

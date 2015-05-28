@@ -311,6 +311,7 @@ section.page img.template {
   left: 50%;
   width: 50%;
   height: 1080px;
+  pointer-events: none;
   background: transparent url(../img/info/img-background.jpg) no-repeat center center;
 }
 #info .col.right img {
@@ -653,6 +654,7 @@ section.page img.template {
   left: 0;
   width: 795px;
   height: 1080px;
+  pointer-events: none;
 }
 #bio .col.left .copyright {
   color: white;

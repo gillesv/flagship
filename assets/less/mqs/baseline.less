@@ -1,7 +1,5 @@
 .baseline(@param:'') {
-	
-	
-	
+		
 	body {
 		overflow: hidden;
 		background: #000;
@@ -180,14 +178,18 @@
 				
 				background: #fff;
 				
-							
-				animation-name: pageFadeOut;
-				animation-timing-function: ease-in;
-				animation-duration: .5s;
+				// start invisible
+				opacity: 0;
+				
+				// start disabled
+				pointer-events: none;
+				
 				animation-direction: normal;
 				animation-fill-mode: forwards;
 				animation-play-state: running;
-				z-index: 100;
+				
+				animation-timing-function: ease-in;
+				animation-duration: .5s;
 			}
 		}
 	}
@@ -203,10 +205,7 @@
 		
 		#container {
 			#info {		
-				animation-name: pageFadeIn;		
-				animation-timing-function: ease-out;
-				animation-duration: .2s;
-				z-index: 200;
+				.introMixin;	
 			}
 		}
 	}
@@ -222,10 +221,7 @@
 		
 		#container {
 			#about {
-				animation-name: pageFadeIn;
-				animation-timing-function: ease-out;
-				animation-duration: .2s;
-				z-index: 200;
+				.introMixin;
 			}
 		}
 	}
@@ -241,12 +237,14 @@
 		
 		#container {
 			#bio {
-				animation-name: pageFadeIn;
-				animation-timing-function: ease-out;
-				animation-duration: .2s;
-				z-index: 200;
+				.introMixin;
 			}
 		}
+	}
+	
+	.introMixin(@param:'') {
+		pointer-events: all;
+		animation-name: pageFadeIn;
 	}
 		
 	

@@ -33,7 +33,6 @@ $(document).ready(function() {
 		if(overlayerOpen) {
 			showOverlayer();
 		}
-		//$('#about').toggleClass('showOverlayer', overlayerOpen);
 	}
 	
 	// language nav
@@ -62,7 +61,6 @@ $(document).ready(function() {
 		showPage();
 		
 		hideOverlayer();
-		//$('#about').toggleClass('showOverlayer', false);	// hide overlayer
 	});
 	
 	// open/close overlayer	
@@ -70,18 +68,12 @@ $(document).ready(function() {
 		evt.preventDefault();
 		
 		showOverlayer();
-		
-		//overlayerOpen = true;
-		//$('#about').toggleClass('showOverlayer', overlayerOpen);
 	});
 	
 	$('#history .button.back').click(function(evt) {
 		evt.preventDefault();
 		
 		hideOverlayer();
-		
-		//overlayerOpen = false;
-		//$('#about').toggleClass('showOverlayer', overlayerOpen);
 	});
 	
 	// swiping
@@ -108,10 +100,7 @@ $(document).ready(function() {
 			index = 0;
 		}
 		
-		//overlayerOpen = false;
-		//$('#about').toggleClass('showOverlayer', overlayerOpen);
-		hideOverlayer();
-		
+		hideOverlayer();		
 		hidePage();
 		
 		activepage = pagesequence[index].toString();

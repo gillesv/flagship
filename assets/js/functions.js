@@ -8,7 +8,8 @@ $(document).ready(function() {
 	
 	// check URL hash
 	if(window.location.hash.toString() === '') {
-		$app.toggleClass(activepageclass + activepage, true);
+		showPage();
+		//$app.toggleClass(activepageclass + activepage, true);
 	} else {
 		var hash = window.location.hash.toString().split("#").join('').toString();
 		
@@ -28,7 +29,8 @@ $(document).ready(function() {
 			break;
 		}
 		
-		$app.toggleClass(activepageclass + activepage, true);
+		showPage();
+		//$app.toggleClass(activepageclass + activepage, true);
 		$('#about').toggleClass('showOverlayer', overlayerOpen);
 	}
 	
@@ -53,12 +55,16 @@ $(document).ready(function() {
 		
 		var href = $(this).attr("href").toString().split("#").join("").toString();
 		
-		$app.toggleClass(activepageclass + activepage, false);
-		$app.toggleClass(activepageclass + href, true);
+		//$app.toggleClass(activepageclass + activepage, false);
+		//$app.toggleClass(activepageclass + href, true);
+		
+		hidePage();
+		activepage = href;
+		showPage();
 		
 		$('#about').toggleClass('showOverlayer', false);	// hide overlayer
 		
-		activepage = href;		
+		//activepage = href;		
 	});
 	
 	// open/close overlayer	
@@ -105,13 +111,23 @@ $(document).ready(function() {
 		overlayerOpen = false;
 		$('#about').toggleClass('showOverlayer', overlayerOpen);
 		
-		$app.toggleClass(activepageclass + activepage, false);
+		//$app.toggleClass(activepageclass + activepage, false);
+		hidePage();
 		
 		activepage = pagesequence[index].toString();
 		
-		$app.toggleClass(activepageclass + activepage, true);
-		
+		//$app.toggleClass(activepageclass + activepage, true);
+		showPage();
 	});
+	
+	// function hide page
+	function hidePage() {
+		$app.toggleClass(activepageclass + activepage, false);
+	}
+	
+	function showPage() {
+		$app.toggleClass(activepageclass + activepage, true);
+	}
 });
 
 // RAF fallback by http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/

@@ -9,7 +9,6 @@ $(document).ready(function() {
 	// check URL hash
 	if(window.location.hash.toString() === '') {
 		showPage();
-		//$app.toggleClass(activepageclass + activepage, true);
 	} else {
 		var hash = window.location.hash.toString().split("#").join('').toString();
 		
@@ -30,8 +29,11 @@ $(document).ready(function() {
 		}
 		
 		showPage();
-		//$app.toggleClass(activepageclass + activepage, true);
-		$('#about').toggleClass('showOverlayer', overlayerOpen);
+		
+		if(overlayerOpen) {
+			showOverlayer();
+		}
+		//$('#about').toggleClass('showOverlayer', overlayerOpen);
 	}
 	
 	// language nav
@@ -55,33 +57,31 @@ $(document).ready(function() {
 		
 		var href = $(this).attr("href").toString().split("#").join("").toString();
 		
-		//$app.toggleClass(activepageclass + activepage, false);
-		//$app.toggleClass(activepageclass + href, true);
-		
 		hidePage();
 		activepage = href;
 		showPage();
 		
-		$('#about').toggleClass('showOverlayer', false);	// hide overlayer
-		
-		//activepage = href;		
+		hideOverlayer();
+		//$('#about').toggleClass('showOverlayer', false);	// hide overlayer
 	});
 	
 	// open/close overlayer	
 	$('#about .button.info').click(function(evt) {
 		evt.preventDefault();
 		
-		overlayerOpen = true;
+		showOverlayer();
 		
-		$('#about').toggleClass('showOverlayer', overlayerOpen);
+		//overlayerOpen = true;
+		//$('#about').toggleClass('showOverlayer', overlayerOpen);
 	});
 	
 	$('#history .button.back').click(function(evt) {
 		evt.preventDefault();
 		
-		overlayerOpen = false;
+		hideOverlayer();
 		
-		$('#about').toggleClass('showOverlayer', overlayerOpen);
+		//overlayerOpen = false;
+		//$('#about').toggleClass('showOverlayer', overlayerOpen);
 	});
 	
 	// swiping
@@ -108,25 +108,34 @@ $(document).ready(function() {
 			index = 0;
 		}
 		
-		overlayerOpen = false;
-		$('#about').toggleClass('showOverlayer', overlayerOpen);
+		//overlayerOpen = false;
+		//$('#about').toggleClass('showOverlayer', overlayerOpen);
+		hideOverlayer();
 		
-		//$app.toggleClass(activepageclass + activepage, false);
 		hidePage();
 		
 		activepage = pagesequence[index].toString();
-		
-		//$app.toggleClass(activepageclass + activepage, true);
 		showPage();
 	});
 	
-	// function hide page
+	// function show/hide page
+	function showPage() {
+		$app.toggleClass(activepageclass + activepage, true);
+	}
+	
 	function hidePage() {
 		$app.toggleClass(activepageclass + activepage, false);
 	}
 	
-	function showPage() {
-		$app.toggleClass(activepageclass + activepage, true);
+	// function show/hide overlayer
+	function showOverlayer() {
+		overlayerOpen = true;
+		$('#about').toggleClass('showOverlayer', true);
+	}
+	
+	function hideOverlayer() {
+		overlayerOpen = false;
+		$('#about').toggleClass('showOverlayer', false);
 	}
 });
 

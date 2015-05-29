@@ -324,6 +324,10 @@ div.brand {
   line-height: 32px;
   margin: 0;
 }
+.nav .prev a:active,
+.nav .next a:active {
+  background: rgba(240, 240, 240, 0.9);
+}
 .nav .prev a {
   text-align: left;
   border-bottom-right-radius: 16px;
@@ -641,6 +645,9 @@ section.page img.template {
   background: transparent url(../img/btn-icon-info.png) no-repeat 0 0;
   position: relative;
   left: 10px;
+}
+#about .timeline a.button.info:active {
+  background: #dcdcdc;
 }
 #about .overlayer {
   opacity: 0;

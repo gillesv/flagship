@@ -8,7 +8,7 @@
 		width: 1920px;
 		height: 1080px;
 		
-		background: #fff;
+		background: #fff url(../img/screensaver.jpg) no-repeat 0 0;
 		
 		.brand {
 			position: absolute;
@@ -30,16 +30,35 @@
 		
 		li {
 			display: table-cell;
-			text-align: center;
-			width: 50%;
+			text-align: left;
+			width: 45%;
 			vertical-align: middle;
+			padding: 0 1.5%;
+		}
+		
+		li:first-child {
+			text-align: right;
 		}
 		
 		li a {
 			color: @color;
 			text-decoration: none;
-			font-family: @display;
-			font-size: 150px;
+			font-family: "BelfiusAlternative";
+			
+			span, strong {
+				display: block;
+				margin: 24px 0;
+			}
+			
+			span {
+				font-size: 36px;
+			}
+			
+			strong {
+				color: @red;
+				font-size: 46px;
+			}
+			
 		}
 		
 	}

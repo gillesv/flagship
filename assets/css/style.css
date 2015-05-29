@@ -776,7 +776,7 @@ section.page img.template {
   left: 0;
   width: 1920px;
   height: 1080px;
-  background: #fff;
+  background: #ffffff url(../img/screensaver.jpg) no-repeat 0 0;
 }
 #screensaver .brand {
   position: absolute;
@@ -796,13 +796,28 @@ section.page img.template {
 }
 #screensaver li {
   display: table-cell;
-  text-align: center;
-  width: 50%;
+  text-align: left;
+  width: 45%;
   vertical-align: middle;
+  padding: 0 1.5%;
+}
+#screensaver li:first-child {
+  text-align: right;
 }
 #screensaver li a {
   color: #435c6b;
   text-decoration: none;
-  font-family: "BelfiusAlternativeBold";
-  font-size: 150px;
+  font-family: "BelfiusAlternative";
+}
+#screensaver li a span,
+#screensaver li a strong {
+  display: block;
+  margin: 24px 0;
+}
+#screensaver li a span {
+  font-size: 36px;
+}
+#screensaver li a strong {
+  color: #c30045;
+  font-size: 46px;
 }

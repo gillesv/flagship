@@ -51,7 +51,7 @@ $(document).ready(function() {
 	});
 	
 	// main nav
-	$('nav#topnav a').click(function(evt) {
+	$('nav#topnav a, a.infolink').click(function(evt) {
 		evt.preventDefault();
 		
 		var href = $(this).attr("href").toString().split("#").join("").toString();
@@ -132,6 +132,19 @@ $(document).ready(function() {
 		overlayerOpen = false;
 		$('#about').toggleClass('showOverlayer', false);
 	}
+	
+	
+	// fancybox
+	$(".fancybox").fancybox({
+		helpers : {
+	        overlay : {
+	            css : {
+	                'background' : 'rgba(24, 0, 4, 0.85)'
+	            }
+	        }
+	    }
+	});
+	
 });
 
 // RAF fallback by http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/

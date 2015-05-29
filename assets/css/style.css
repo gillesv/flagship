@@ -40,6 +40,7 @@ body {
   font-family: Arial, sans-serif;
   font-weight: 300;
   color: #435c6b;
+  height: 100%;
 }
 #app {
   background: #fff;

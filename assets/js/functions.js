@@ -145,6 +145,29 @@ $(document).ready(function() {
 	    }
 	});
 	
+	// screensaver — wait 3 minutes, then redirect to index.html
+	
+	var screensaver = 0,
+		DURATION = 180*1000;	// 3 minutes in milliseconds
+	
+	function resetScreensaverTimer() {
+		clearTimeout(screensaver);
+		
+		screensaver = setTimeout(onScreensaverStart, DURATION);
+	}
+	
+	resetScreensaverTimer();
+	
+	function onScreensaverStart() {
+		window.location = "index.html";
+	}
+	
+	// events that cancel screensaver: click, mousemove
+	
+	$('body').on('click mousemove mousedown', function(evt) {
+		resetScreensaverTimer();
+	});
+	
 });
 
 // RAF fallback by http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/

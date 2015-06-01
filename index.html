@@ -12,8 +12,36 @@
 	
 	<script>
 		Modernizr.load([
-			'assets/js/lib/jquery-2.1.4.min.js',
-			'assets/js/lib/hammer.min.js'
+			{
+				load: 	['assets/js/lib/jquery-2.1.4.min.js',
+						'assets/js/lib/hammer.min.js'],
+				complete: function() {
+					$(document).ready(function(){
+						
+						var screensaver = 0,
+							DURATION = 60*10*1000;	// 10 minutes in milliseconds
+						
+						function resetScreensaverTimer() {
+							clearTimeout(screensaver);
+							
+							screensaver = setTimeout(onScreensaverStart, DURATION);
+						}
+						
+						resetScreensaverTimer();
+						
+						function onScreensaverStart() {
+							window.location.reload();
+						}
+						
+						// events that cancel screensaver: click, mousemove
+						
+						$('body').on('click mousemove mousedown', function(evt) {
+							resetScreensaverTimer();
+						});
+						
+					});
+				}
+			}
 		]);
 	</script>
 </head>

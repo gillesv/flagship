@@ -18,6 +18,8 @@
 				complete: function() {
 					$(document).ready(function(){
 						
+						$("#screensaver").toggleClass("fade", true);	// force a fade-in animation
+						
 						var screensaver = 0,
 							DURATION = 60*10*1000;	// 10 minutes in milliseconds
 						
@@ -30,7 +32,7 @@
 						resetScreensaverTimer();
 						
 						function onScreensaverStart() {
-							window.location.reload();
+							window.location.reload(true);
 						}
 						
 						// events that cancel screensaver: click, mousemove
@@ -45,9 +47,9 @@
 		]);
 	</script>
 </head>
-<body>
+<body class="screensaver">
 	
-	<div id="screensaver">
+	<div id="screensaver" class="">
 		
 		<ul>
 			<li><a href="index_nl.html"><strong>De “Lustpil (Toverbol)”</strong> <span>&laquo; Meer info</span></a></li>

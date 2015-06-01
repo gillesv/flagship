@@ -770,13 +770,21 @@ section.page img.template {
   top: 63px;
   z-index: 100;
 }
+body.screensaver {
+  background: #fff;
+}
 #screensaver {
   position: absolute;
   top: 0;
   left: 0;
   width: 1920px;
   height: 1080px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
   background: #ffffff url(../img/screensaver.jpg) no-repeat 0 0;
+}
+#screensaver.fade {
+  opacity: 1;
 }
 #screensaver .brand {
   position: absolute;

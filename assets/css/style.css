@@ -799,24 +799,22 @@ body.screensaver {
   padding: 0;
 }
 #screensaver ul {
-  width: 100%;
+  width: 70%;
   height: 100%;
   display: table;
+  padding: 0 15%;
 }
 #screensaver li {
   display: table-cell;
-  text-align: left;
+  text-align: center;
   width: 45%;
   vertical-align: middle;
   padding: 0 1.5%;
 }
-#screensaver li:first-child {
-  text-align: right;
-}
 #screensaver li a {
   color: #435c6b;
   text-decoration: none;
-  font-family: "BelfiusAlternative";
+  font-family: "BelfiusAlternativeBold";
 }
 #screensaver li a span,
 #screensaver li a strong {
@@ -825,8 +823,10 @@ body.screensaver {
 }
 #screensaver li a span {
   font-size: 36px;
+  display: block;
 }
 #screensaver li a strong {
   color: #c30045;
   font-size: 46px;
+  text-transform: uppercase;
 }

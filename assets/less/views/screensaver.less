@@ -35,27 +35,29 @@
 		}
 		
 		ul {
-			width: 100%;
+			width: 70%;
 			height: 100%;
 			display: table;
+			padding: 0 15%;
 		}
 		
 		li {
 			display: table-cell;
-			text-align: left;
+			text-align: center;
 			width: 45%;
 			vertical-align: middle;
 			padding: 0 1.5%;
+			//border: 1px solid @red;
 		}
 		
 		li:first-child {
-			text-align: right;
+			//text-align: right;
 		}
 		
 		li a {
 			color: @color;
 			text-decoration: none;
-			font-family: "BelfiusAlternative";
+			font-family: @display;
 			
 			span, strong {
 				display: block;
@@ -64,11 +66,13 @@
 			
 			span {
 				font-size: 36px;
+				display: block;
 			}
 			
 			strong {
 				color: @red;
 				font-size: 46px;
+				text-transform: uppercase;
 			}
 			
 		}

@@ -361,8 +361,8 @@ section.page img.template {
 }
 #info .langswitch {
   position: absolute;
-  top: 65px;
-  left: 835px;
+  top: 33px;
+  left: 865px;
 }
 #info .col.left {
   position: absolute;
@@ -704,7 +704,8 @@ section.page img.template {
   margin: 0;
 }
 #history .columns {
-  -webkit-columns: 200px 4;
+  -webkit-columns: 4;
+  -webkit-column-gap: 28px;
   position: absolute;
   top: 184px;
   left: 364px;
@@ -724,8 +725,11 @@ section.page img.template {
 }
 #history .belfiusartontour {
   position: absolute;
-  top: 188px;
-  left: 1636px;
+  top: 368px;
+  left: 1305px;
+}
+.lang-fr #history .belfiusartontour {
+  top: 440px;
 }
 #bio .col.left {
   position: absolute;
@@ -752,7 +756,8 @@ section.page img.template {
   padding: 64px 50px 0 64px;
 }
 #bio .col.right .columns {
-  -webkit-columns: 300px 2;
+  -webkit-columns: 2;
+  -webkit-column-gap: 46px;
   height: 740px;
 }
 #bio .col.right .columns p {
@@ -768,7 +773,7 @@ section.page img.template {
 #bio .langswitch {
   position: absolute;
   left: 1163px;
-  top: 63px;
+  top: 51px;
   z-index: 100;
 }
 body.screensaver {

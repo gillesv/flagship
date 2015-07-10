@@ -190,32 +190,32 @@ div.brand {
   background: #fff;
   opacity: 0;
   pointer-events: none;
-  animation-direction: normal;
-  animation-fill-mode: forwards;
-  animation-play-state: running;
-  animation-timing-function: ease-in;
-  animation-duration: .5s;
+  -webkit-animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-play-state: running;
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: .5s;
 }
 #app.active-page-info #topnav ul.nav.nav-info {
   display: block;
 }
 #app.active-page-info #container #info {
   pointer-events: all;
-  animation-name: pageFadeIn;
+  -webkit-animation-name: pageFadeIn;
 }
 #app.active-page-about #topnav ul.nav.nav-about {
   display: block;
 }
 #app.active-page-about #container #about {
   pointer-events: all;
-  animation-name: pageFadeIn;
+  -webkit-animation-name: pageFadeIn;
 }
 #app.active-page-bio #topnav ul.nav.nav-bio {
   display: block;
 }
 #app.active-page-bio #container #bio {
   pointer-events: all;
-  animation-name: pageFadeIn;
+  -webkit-animation-name: pageFadeIn;
 }
 /*
 	 * Modular animation classes
@@ -230,39 +230,39 @@ div.brand {
 .page.active .intro-8,
 .page.active .intro-9 {
   opacity: 0;
-  animation-name: elementFadeIn;
-  animation-duration: .5s;
-  animation-timing-function: ease-out;
-  animation-direction: normal;
-  animation-fill-mode: forwards;
-  animation-play-state: running;
+  -webkit-animation-name: elementFadeIn;
+  -webkit-animation-duration: .5s;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-play-state: running;
 }
 .page.active .intro-1 {
-  animation-delay: 0s;
+  -webkit-animation-delay: 0s;
 }
 .page.active .intro-2 {
-  animation-delay: .2s;
+  -webkit-animation-delay: .2s;
 }
 .page.active .intro-3 {
-  animation-delay: .4s;
+  -webkit-animation-delay: .4s;
 }
 .page.active .intro-4 {
-  animation-delay: .6s;
+  -webkit-animation-delay: .6s;
 }
 .page.active .intro-5 {
-  animation-delay: .8s;
+  -webkit-animation-delay: .8s;
 }
 .page.active .intro-6 {
-  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
 }
 .page.active .intro-7 {
-  animation-delay: 1.2s;
+  -webkit-animation-delay: 1.2s;
 }
 .page.active .intro-8 {
-  animation-delay: 1.4s;
+  -webkit-animation-delay: 1.4s;
 }
 .page.active .intro-9 {
-  animation-delay: 1.6s;
+  -webkit-animation-delay: 1.6s;
 }
 /*
 	 * Utility classes
@@ -652,12 +652,12 @@ section.page img.template {
 }
 #about .overlayer {
   opacity: 0;
-  animation-name: pageFadeOut;
-  animation-timing-function: ease-in;
-  animation-duration: .5s;
-  animation-direction: normal;
-  animation-fill-mode: forwards;
-  animation-play-state: running;
+  -webkit-animation-name: pageFadeOut;
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: .5s;
+  -webkit-animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-play-state: running;
   pointer-events: none;
   position: absolute;
   top: 0;
@@ -668,7 +668,7 @@ section.page img.template {
   z-index: 500;
 }
 #about.showOverlayer .overlayer {
-  animation-name: pageFadeIn;
+  -webkit-animation-name: pageFadeIn;
   pointer-events: auto;
   height: 100%;
 }
